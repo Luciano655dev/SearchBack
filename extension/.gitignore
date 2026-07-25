@@ -1,0 +1,7 @@
+node_modules/
+dist/
+release/*.zip
+release/*.sha256
+.vercel/
+*.log
+.DS_Store

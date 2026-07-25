@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+extension/release/*.zip
+extension/release/*.sha256
+
+# Vercel
+.vercel/
+
+# Vite cache
+.vite/
+
+# Logs
+*.log
+
+# OS
+.DS_Store

@@ -1,0 +1,23 @@
+{
+  "name": "searchback",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Searchback monorepo: the Chrome extension and the marketing website.",
+  "type": "module",
+  "workspaces": [
+    "website",
+    "extension"
+  ],
+  "scripts": {
+    "dev:website": "npm run dev --workspace searchback-website",
+    "dev:extension": "npm run dev --workspace searchback-extension",
+    "build": "npm run build --workspaces --if-present",
+    "build:website": "npm run build --workspace searchback-website",
+    "build:extension": "npm run build --workspace searchback-extension",
+    "test": "npm run test --workspaces --if-present",
+    "release:extension": "npm run release --workspace searchback-extension"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

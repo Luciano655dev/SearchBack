@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=440, initial-scale=1" />
+    <title>Searchback small promo</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 440px; height: 280px; margin: 0; overflow: hidden; }
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1.15fr;
+        align-items: center;
+        padding: 34px 36px;
+        color: #171713;
+        background: #f3f1ea;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      .copy { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; }
+      .brand { display: flex; align-items: center; gap: 9px; font-size: 17px; font-weight: 750; }
+      .brand img { width: 32px; height: 32px; }
+      p { margin: 0; max-width: 160px; font-size: 25px; font-weight: 680; line-height: 1.02; letter-spacing: -0.045em; }
+      .memory {
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 11px;
+        padding: 22px;
+        border: 1px solid #171713;
+        border-left: 4px solid #e9511d;
+        background: #fff;
+      }
+      .eyebrow { color: #e9511d; font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+      .memory strong { font-size: 15px; }
+      .line { height: 1px; background: #d1cec4; }
+      .answer { padding: 9px 10px; color: #14532d; background: #eef8f0; font-size: 10px; line-height: 1.4; }
+    </style>
+  </head>
+  <body>
+    <div class="copy">
+      <div class="brand"><img src="/icons/icon128.png" alt="" />Searchback</div>
+      <p>Your browser remembers.</p>
+    </div>
+    <div class="memory">
+      <span class="eyebrow">Solved before</span>
+      <strong>Mac storage problem</strong>
+      <div class="line"></div>
+      <div class="answer">Ran docker system prune. Freed 40 GB.</div>
+    </div>
+  </body>
+</html>

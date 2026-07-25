@@ -1,0 +1,101 @@
+{
+  "manifest_version": 3,
+  "name": "Searchback",
+  "version": "1.0.1",
+  "description": "Searchback remembers problems you searched before, so you do not start from zero next time.",
+  "homepage_url": "https://searchback.vercel.app/",
+  "permissions": [
+    "history",
+    "storage",
+    "tabs",
+    "notifications",
+    "alarms",
+    "favicon"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "_favicon/*"
+      ],
+      "matches": [
+        "https://*.google.com/*",
+        "https://*.google.com.br/*",
+        "https://*.google.co.uk/*",
+        "https://*.google.ca/*",
+        "https://*.google.com.au/*",
+        "https://*.google.de/*",
+        "https://*.google.fr/*",
+        "https://*.google.es/*",
+        "https://*.google.it/*",
+        "https://*.google.nl/*",
+        "https://*.google.pt/*",
+        "https://*.google.com.mx/*",
+        "https://*.google.com.ar/*",
+        "https://*.google.co.in/*",
+        "https://*.google.co.jp/*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://perplexity.ai/*",
+        "https://copilot.microsoft.com/*",
+        "https://grok.com/*",
+        "https://groq.com/*",
+        "https://chat.deepseek.com/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.google.com/*",
+        "https://*.google.com.br/*",
+        "https://*.google.co.uk/*",
+        "https://*.google.ca/*",
+        "https://*.google.com.au/*",
+        "https://*.google.de/*",
+        "https://*.google.fr/*",
+        "https://*.google.es/*",
+        "https://*.google.it/*",
+        "https://*.google.nl/*",
+        "https://*.google.pt/*",
+        "https://*.google.com.mx/*",
+        "https://*.google.com.ar/*",
+        "https://*.google.co.in/*",
+        "https://*.google.co.jp/*",
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://perplexity.ai/*",
+        "https://copilot.microsoft.com/*",
+        "https://grok.com/*",
+        "https://groq.com/*",
+        "https://chat.deepseek.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Searchback",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "dashboard.html"
+}

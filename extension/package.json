@@ -1,0 +1,29 @@
+{
+  "name": "searchback-extension",
+  "private": true,
+  "version": "1.0.1",
+  "description": "Searchback remembers problems you searched before, so you do not start from zero next time.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run icons && tsc --noEmit && vite build && vite build -c vite.content.config.ts",
+    "icons": "node scripts/generate-icons.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package:store": "node scripts/package-store.mjs",
+    "release": "npm test && npm run build && npm run package:store"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.2.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.5",
+    "vitest": "^4.1.10"
+  }
+}
