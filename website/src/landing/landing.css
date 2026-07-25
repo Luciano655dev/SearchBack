@@ -837,6 +837,10 @@ footer > a:focus-visible {
   text-underline-offset: 4px;
 }
 
+.install-guide {
+  align-self: center;
+}
+
 .install-steps {
   margin: 0;
   padding: 0;
@@ -845,21 +849,36 @@ footer > a:focus-visible {
 }
 
 .install-steps li {
-  min-height: 72px;
-  display: grid;
-  grid-template-columns: 40px 1fr;
+  display: flex;
   align-items: center;
+  gap: 16px;
+  padding: 18px 0;
   border-bottom: 1px solid #94a4ef;
   font-size: 14px;
+  line-height: 1.5;
+}
+
+.install-steps li > span:first-child {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f9ad90;
+  border-radius: 999px;
+  color: #f9ad90;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.install-steps .step-text {
+  color: inherit;
 }
 
 .install-steps strong {
   font-weight: 750;
-}
-
-.install-steps span {
-  color: #f9ad90;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 .install code {
@@ -869,8 +888,7 @@ footer > a:focus-visible {
 }
 
 .install-footnote {
-  grid-column: 2;
-  margin: -62px 0 0;
+  margin: 24px 0 0;
   color: #d8dcf7;
   font-size: 12px;
   line-height: 1.6;
@@ -1085,9 +1103,8 @@ footer > a:last-child {
     gap: 56px;
   }
 
-  .install-footnote {
-    grid-column: auto;
-    margin-top: -34px;
+  .install-guide {
+    align-self: stretch;
   }
 
   .daily {

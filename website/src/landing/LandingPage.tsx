@@ -3,7 +3,7 @@ import dashboardScreenshot from "../../docs/screenshots/2-dashboard.png";
 
 const iconUrl = "/icons/icon128.png";
 const chromeStoreUrl = "https://chromewebstore.google.com/detail/searchback/aiefiangapjlhohdlaabcgiakcapkekp";
-const extensionRepositoryUrl = "https://github.com/Luciano655dev/searchback-extension";
+const repositoryUrl = "https://github.com/Luciano655dev/searchback";
 
 const steps = [
   {
@@ -329,24 +329,26 @@ export function LandingPage() {
                 <DownloadIcon />
                 Add to Chrome
               </a>
-              <a className="install-source" href={extensionRepositoryUrl} target="_blank" rel="noreferrer">
+              <a className="install-source" href={repositoryUrl} target="_blank" rel="noreferrer">
                 <GitHubIcon />
                 View source
                 <ExternalLinkIcon />
               </a>
             </div>
           </div>
-          <ol className="install-steps">
-            <li><span>1</span>Open the <strong>Chrome Web Store</strong> listing</li>
-            <li><span>2</span>Select <strong>Add to Chrome</strong></li>
-            <li><span>3</span>Confirm with <strong>Add extension</strong></li>
-            <li><span>4</span>Pin Searchback from the extensions menu</li>
-            <li><span>5</span>Keep searching — your solutions come back automatically</li>
-          </ol>
-          <p className="install-footnote">
-            Searchback runs entirely in your browser. The built-in guide supplies optional local
-            sample research so you can see the result immediately.
-          </p>
+          <div className="install-guide">
+            <ol className="install-steps">
+              <li><span>1</span><span className="step-text">Open the <strong>Chrome Web Store</strong> listing</span></li>
+              <li><span>2</span><span className="step-text">Select <strong>Add to Chrome</strong></span></li>
+              <li><span>3</span><span className="step-text">Confirm with <strong>Add extension</strong></span></li>
+              <li><span>4</span><span className="step-text">Pin Searchback from the extensions menu</span></li>
+              <li><span>5</span><span className="step-text">Keep searching — your solutions come back automatically</span></li>
+            </ol>
+            <p className="install-footnote">
+              Searchback runs entirely in your browser. The built-in guide supplies optional local
+              sample research so you can see the result immediately.
+            </p>
+          </div>
         </section>
       </main>
 
@@ -357,7 +359,7 @@ export function LandingPage() {
         </a>
         <p>Stop starting from zero.</p>
         <div className="footer-links">
-          <a href={extensionRepositoryUrl} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={repositoryUrl} target="_blank" rel="noreferrer">GitHub</a>
           <a href="/privacy">Privacy policy</a>
           <a href="#top">Back to top</a>
         </div>
